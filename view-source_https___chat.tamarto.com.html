@@ -1,39 +1,44 @@
 
+<!-- Readme -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamarto — World's Most Secure Communication App | Sharded Browser Encryption</title>
-    <meta name="description" content="Tamarto is the world's most secure communication app with sharded encryption in the browser. Nodes store only current data, no history. Delete communications anytime.">
-    <meta name="keywords" content="secure communication app, sharded encryption, browser crypto, delete messages anytime, no history communication, tamarto">
+    <title>Tamarto — Decentralized & Disappearing Communication</title>
+    <meta name="description" content="Tamarto is an ultra-secure, decentralized communication app where messages disappear by default. Distributed circular encryption in the browser.">
+    <meta name="keywords" content="secure communication, decentralized, disappearing messages, circular encryption, browser crypto, zero knowledge, tamarto">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    <!-- Open Graph (Facebook / Meta / LinkedIn) -->
-    <meta property="og:title" content="Tamarto - World's Most Secure Communication App">
-    <meta property="og:description" content="Sharded browser encryption. Nodes store only current data, no history. Delete communications anytime.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tamarto - Decentralized & Disappearing">
+    <meta property="og:description" content="Ultra-secure communication. Nodes store only partial current data segments. Messages disappear by default.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tamarto.com">
     <meta property="og:image" content="https://res.cloudinary.com/ddfvoopry/image/upload/v1764073717/tamarto-carrot_v90kok.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tamarto - World's Most Secure Communication App">
-    <meta name="twitter:description" content="Sharded browser encryption. Nodes store only current data, no history. Delete communications anytime.">
+    <meta name="twitter:title" content="Tamarto - Decentralized & Disappearing">
+    <meta name="twitter:description" content="Ultra-secure communication. Nodes store only partial current data segments. Messages disappear by default.">
     <meta name="twitter:image" content="https://res.cloudinary.com/ddfvoopry/image/upload/v1764073717/tamarto-carrot_v90kok.png">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- App uses browser default -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Courier+Prime&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
-    <script src="/js/tailwind.js"></script>
+    <script>
+     // App uses style sheet for extra security
+    </script>
 
     <style>
         html {
             scroll-behavior: smooth;
         }
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #6b21a8 100%);
+        body {
+            font-family: 'Inter', sans-serif;
         }
 
         .feature-card:hover {
@@ -69,25 +74,50 @@
             box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
         }
 
-        /* Utility to invert logo color for dark footer */
         .filter-white {
             filter: brightness(0) invert(1);
         }
 
         /* Terminal Effect Classes */
         .terminal-card {
-            background-color: #000000;
-            border: 1px solid #22c55e; /* Green-500 */
+            background-color: #050505;
+            border: 1px solid #15803d; /* Green-700 */
             color: #4ade80; /* Green-400 */
-            font-family: 'Courier New', Courier, monospace;
-            box-shadow: 0 0 10px rgba(34, 197, 94, 0.1);
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.05);
             transition: all 0.3s ease;
         }
 
             .terminal-card:hover {
-                box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
-                border-color: #4ade80;
+                box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+                border-color: #22c55e;
             }
+
+        /* Audit Card Classes */
+        .audit-card {
+            background-color: #111827; /* Gray-900 */
+            border: 1px solid #374151; /* Gray-700 */
+            transition: all 0.3s ease;
+        }
+
+            .audit-card:hover {
+                border-color: #a78bfa; /* Purple-400 */
+                transform: translateY(-3px);
+            }
+
+        /* Anon Security Office Card */
+        .anon-quote-card {
+            background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+            border-left: 4px solid #a78bfa;
+            position: relative;
+        }
+
+        .anon-quote-header {
+            font-family: 'Courier Prime', monospace;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #374151;
+        }
 
         .cursor-blink {
             animation: blink 1s step-end infinite;
@@ -103,7 +133,7 @@
             }
         }
 
-        /* Tamarto Hero Background */
+        /* Hero Background */
         .tamarto-hero-bg {
             background: url('https://res.cloudinary.com/ddfvoopry/image/upload/v1760971915/hero_blujgo.png') no-repeat center center/cover;
             position: relative;
@@ -116,7 +146,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(30, 27, 75, 0.85);
+                background: rgba(30, 27, 75, 0.9);
                 z-index: 1;
             }
 
@@ -124,24 +154,37 @@
             position: relative;
             z-index: 2;
         }
+
+        /* Table styles */
+        .comparison-table th {
+            background-color: #1f2937;
+            color: white;
+        }
+
+        .comparison-table td {
+            border-bottom: 1px solid #374151;
+        }
+
+        .comparison-table tr:hover td {
+            background-color: #1f2937;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <img class="h-10" src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764074469/tamarto-transparent-word_swkryf.png" alt="Tamarto Logo">
+                <img class="h-8 md:h-10" src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764230815/tamart-logo-words-white-bg-removebg-preview_zxj4hf.png" alt="Tamarto Logo">
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="nav-link font-medium text-gray-700">Features</a>
-                    <a href="#distributed-grid" class="nav-link font-medium text-gray-700">Sharding</a>
-                    <a href="#security" class="nav-link font-medium text-gray-700">Security</a>
-                    <a href="#how-it-works" class="nav-link font-medium text-gray-700">How It Works</a>
-                    <a href="#testimonials" class="nav-link font-medium text-gray-700">Testimonials</a>
-                    <button id="loginBtn" class="px-6 py-2 bg-purple-700 text-white rounded-full font-semibold hover:bg-purple-800 transition">Launch App</button>
+                    <a href="/downloads.html" class="block py-2 text-gray-700 font-medium">Downloads</a>
+                    <a href="#features" class="nav-link font-medium text-gray-600">Features</a>
+                    <a href="#distributed-grid" class="nav-link font-medium text-gray-600">Architecture</a>
+                    <a href="#comparison" class="nav-link font-medium text-gray-600">Audit</a>
+                    <button id="loginBtn" class="px-6 py-2 bg-purple-700 text-white rounded-full font-semibold hover:bg-purple-800 transition shadow-md hover:shadow-lg">Launch App</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -154,11 +197,10 @@
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-3 border-t border-gray-100 pt-4">
-                <a href="#features" class="block py-2 text-gray-700 hover:text-purple-700 font-medium">Features</a>
-                <a href="#distributed-grid" class="block py-2 text-gray-700 hover:text-purple-700 font-medium">Sharding</a>
-                <a href="#security" class="block py-2 text-gray-700 hover:text-purple-700 font-medium">Security</a>
-                <a href="#how-it-works" class="block py-2 text-gray-700 hover:text-purple-700 font-medium">How It Works</a>
-                <a href="#testimonials" class="block py-2 text-gray-700 hover:text-purple-700 font-medium">Testimonials</a>
+                <a href="/downloads.html" class="block py-2 text-gray-700 font-medium">Downloads</a>
+                <a href="#features" class="block py-2 text-gray-700 font-medium">Features</a>
+                <a href="#distributed-grid" class="block py-2 text-gray-700 font-medium">Architecture</a>
+                <a href="#comparison" class="block py-2 text-gray-700 font-medium">Audit</a>
                 <button id="mobile-login-btn" class="block w-full text-center py-2 bg-purple-700 text-white rounded-full font-semibold mt-4">Launch App</button>
             </div>
         </div>
@@ -169,26 +211,26 @@
         <div class="max-w-7xl mx-auto px-6 w-full">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-3/5 animate-fade-in-up hero-content">
-                    <div class="security-badge inline-block px-4 py-2 rounded-full text-sm font-bold mb-6">
-                        🛡️ WORLD'S MOST SECURE COMMUNICATION
+                    <div class="security-badge inline-block px-4 py-2 rounded-full text-sm font-bold mb-6 tracking-wide">
+                        🛡️ ULTRA SECURE COMMUNICATION
                     </div>
                     <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-                        Communicate.<br>Then Forget.<br><span class="text-purple-300">No Audit Trail.</span>
+                        Speak Freely.<br>Vanish Completely.<br><span class="text-purple-300">Leave No Trace.</span>
                     </h1>
-                    <p class="text-xl text-purple-100 mb-8 leading-relaxed">
-                        Tamarto is the world's most secure communication app with sharded encryption in the browser using Argon2id + AES-256-GCM. Nodes store only current data, no history. Delete communications anytime.
+                    <p class="text-xl text-purple-100 mb-8 leading-relaxed max-w-2xl">
+                        Tamarto is a decentralized platform where messages vanish by default. Data is encrypted via Argon2id + AES-256-GCM and segmented using overlapping redundancy, ensuring no single node ever holds the complete payload.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <button id="hero-login-btn" class="px-8 py-4 bg-white text-purple-900 font-bold rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition text-center">
-                            🚀 Launch Tamarto App
+                            🚀 Launch App
                         </button>
-                        <a href="#security" class="px-8 py-4 bg-purple-800 text-white font-bold rounded-full border-2 border-purple-300 hover:bg-purple-700 transition text-center">
-                            🔐 Learn About Security
+                        <a href="#distributed-grid" class="px-8 py-4 bg-transparent border-2 border-purple-300 text-white font-bold rounded-full hover:bg-purple-900/50 transition text-center">
+                            How It Works
                         </a>
                     </div>
                 </div>
                 <div class="lg:w-2/5 hero-content">
-                    <img class="rounded-2xl shadow-2xl w-full border-4 border-purple-300" src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764073717/tamarto-carrot_v90kok.png" alt="Tamarto App Interface">
+                    <img class="rounded-2xl shadow-2xl w-full border-4 border-purple-400/30" src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764177827/screen-shot_kjsrvu.png" alt="Tamarto App Interface">
                 </div>
             </div>
         </div>
@@ -199,153 +241,182 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Why Tamarto?</h2>
-                <p class="text-xl text-gray-600">Secure communication without compromise</p>
+                <p class="text-xl text-gray-600">Security via distributed topology, not just algorithms. Purchase access token with $Snard to relay via the secure nodes.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="feature-card bg-gradient-to-br from-purple-50 to-white border border-purple-200 rounded-2xl p-8 shadow-lg transition-all">
-                    <div class="text-5xl mb-4">🔒</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Sharded Encryption</h3>
+                <div class="feature-card bg-purple-50 border border-purple-100 rounded-2xl p-8 transition-all">
+                    <div class="text-5xl mb-4">🔗</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Decentralized Segments</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Messages are split into encrypted shards in your browser before transmission using Argon2id + AES-256-GCM. Only current data is stored on nodes, with no message history retained.
+                        Data is sliced into segments and distributed to nodes in a ring. A node holds its own segment plus the next one. This creates 100% redundancy without any single node having the full file.
                     </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="feature-card bg-gradient-to-br from-green-50 to-white border border-green-200 rounded-2xl p-8 shadow-lg transition-all">
+                <div class="feature-card bg-green-50 border border-green-100 rounded-2xl p-8 transition-all">
                     <div class="text-5xl mb-4">⚡</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Browser-Based Crypto</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Client-Side Crypto</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        All sophisticated cryptography happens directly in your browser with WebAssembly-powered Argon2id and AES-256-GCM. No server-side decryption. Your keys never leave your device.
+                        Encryption happens locally using WebAssembly (Argon2id + AES-256-GCM). The server nodes only see meaningless encrypted binary blobs. Your keys never leave your device.
                     </p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="feature-card bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-2xl p-8 shadow-lg transition-all">
-                    <div class="text-5xl mb-4">🔐</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Delete Anytime</h3>
+                <div class="feature-card bg-blue-50 border border-blue-100 rounded-2xl p-8 transition-all">
+                    <div class="text-5xl mb-4">🧨</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Disappearing Messages</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Any user can delete communications at any time. Once deleted, messages are permanently erased from all nodes with no recovery possible.
+                        Messages vanish by default. You control the lifespan of your data. Hitting delete instantly purges the segments from the distributed nodes. Once the chain is broken, recovery is impossible.
                     </p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-card bg-gradient-to-br from-orange-50 to-white border border-orange-200 rounded-2xl p-8 shadow-lg transition-all">
-                    <div class="text-5xl mb-4">📦</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">No History Storage</h3>
+                <div class="feature-card bg-orange-50 border border-orange-100 rounded-2xl p-8 transition-all">
+                    <div class="text-5xl mb-4">👻</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">No History</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Nodes only store current encrypted shards not full conversations. No communication history is maintained, eliminating the risk of data breaches from stored messages.
+                        We don't store conversation logs. Nodes only hold the current encrypted segments needed for active viewing. When you close the session, the data evaporates.
                     </p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="feature-card bg-gradient-to-br from-pink-50 to-white border border-pink-200 rounded-2xl p-8 shadow-lg transition-all">
-                    <div class="text-5xl mb-4">🎯</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Zero-Knowledge Architecture</h3>
+                <div class="feature-card bg-pink-50 border border-pink-100 rounded-2xl p-8 transition-all">
+                    <div class="text-5xl mb-4">🧩</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Distributed Risk</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        All encryption happens in your browser with Argon2id key derivation. Nodes cannot read your messages even if compromised. We can't access your communications.
+                        Because no single node possesses the complete file, an attacker must compromise multiple specific geographically independent servers simultaneously to get anything useful.
                     </p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="feature-card bg-gradient-to-br from-indigo-50 to-white border border-indigo-200 rounded-2xl p-8 shadow-lg transition-all">
-                    <div class="text-5xl mb-4">💼</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Secure Any Communication</h3>
+                <div class="feature-card bg-indigo-50 border border-indigo-100 rounded-2xl p-8 transition-all">
+                    <div class="text-5xl mb-4">🛤️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Many Clients</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        Text, files, images - all protected with military-grade Argon2id + AES-256-GCM encryption. If it's sensitive, Tamarto secures it with sharded browser encryption.
+                        <a href="https://tauri.app/">Tauri</a> compiled Windows and IoS clients (smaller, faster and more secure than Electron) or standalone Webapp. Minimal APIs. Zero logging.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Video Section -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
 
-    <!-- NEW SECTION: Distributed Grid & Sharding -->
-    <section id="distributed-grid" class="py-20 bg-gray-900 border-t border-gray-800">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-black">
+                    <iframe src="https://player.cloudinary.com/embed/?cloud_name=sunsetcloud&public_id=demo_jebzwr&profile=cld-default"
+                            title="Tamarto Overview Video"
+                            class="w-full aspect-video"
+                            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy"
+                            frameborder="0">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Distributed Grid Architecture -->
+    <section id="distributed-grid" class="py-20 bg-black border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <div class="inline-block px-4 py-1 bg-green-900 text-green-400 rounded-full text-xs font-mono mb-4 border border-green-700 tracking-widest uppercase">
-                    >> SYSTEM STATUS: ACTIVE
+                <div class="inline-block px-4 py-1 bg-green-900/30 text-green-500 rounded-sm text-xs font-mono mb-4 border border-green-800 tracking-widest uppercase">
+                    >> ARCHITECTURE_VIEW: ACTIVE
                 </div>
-                <h2 class="text-4xl font-extrabold text-white mb-4">Sharded Communication Architecture</h2>
-                <p class="text-xl text-gray-400 font-mono">
-                    > Executing 3-Node Sharding Protocol...<br>
-                    > 6 Shards with Spoofs...<br>
-                    > Applying Argon2id + AES-256-GCM Encryption...
+                <h2 class="text-4xl font-extrabold text-white mb-4">Distributed Circular Topology</h2>
+                <p class="text-xl text-gray-500 font-mono">
+                    > Executing n-Node Ring Replication...<br>
+                    > Redundancy Model: Sequential Overlap...
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Box 1: Triple-Node Architecture (Terminal Style) -->
+                <!-- Box 1: Topology Visual -->
                 <div class="terminal-card rounded-xl p-6 relative overflow-hidden">
-                    <div class="absolute top-2 right-4 text-xs opacity-50">PID: 3920</div>
-                    <div class="text-4xl mb-4">🖥️</div>
-                    <h3 class="text-xl font-bold mb-4 border-b border-green-800 pb-2">> TRIPLE_NODE_GRID</h3>
-                    <p class="text-sm mb-4 opacity-90">
-                        System utilizes 3 isolated, geographically independent nodes. No single point of failure detected. 1 down and it is still live. No History, just the last encrypted sharded data set (useless to any bad actor).
+                    <div class="absolute top-3 right-4 text-xs opacity-50">PID: 3920</div>
+                    <div class="text-4xl mb-4">🕸️</div>
+                    <h3 class="text-lg font-bold mb-4 border-b border-green-900 pb-2">> THE_RING_MODEL</h3>
+                    <p class="text-sm mb-4 opacity-90 leading-relaxed">
+                        Data is split into <em>n</em> parts across a minimum of 3 nodes. The grid forms a circle where each node holds overlapping segments (e.g., node <em>i</em> holds parts <em>i</em> and <em>i+1</em>) to ensure continuity if a peer fails.
                     </p>
-                    <div class="font-mono text-xs space-y-2 bg-green-900 bg-opacity-20 p-3 rounded border border-green-800">
-                        <div>[✓] NODE_01: <span class="text-white">ONLINE (Shard Group A)</span></div>
-                        <div>[✓] NODE_02: <span class="text-white">ONLINE (Shard Group B)</span></div>
-                        <div>[✓] NODE_03: <span class="text-white">ONLINE (Shard Group C)</span></div>
+                    <div class="font-mono text-xs space-y-2 bg-green-900/10 p-3 rounded border border-green-900/50">
+                        <div>NODE_01 holds: [Seg A] + [Seg B]</div>
+                        <div>NODE_02 holds: [Seg B] + [Seg C]</div>
+                        <div class="text-gray-500">...</div>
+                        <div>NODE_<em>n</em>&nbsp;&nbsp; holds: [Seg <em>n</em>] + [Seg A]</div>
+                        <div class="mt-2 text-green-300">> RESULT: 100% Redundancy</div>
                     </div>
                 </div>
 
-                <!-- Box 2: The Sharding Standard (Terminal Style) -->
+                <!-- Box 2: Distribution Logic -->
                 <div class="terminal-card rounded-xl p-6">
-                    <div class="text-4xl mb-4">🧩</div>
-                    <h3 class="text-xl font-bold mb-4 border-b border-green-800 pb-2">> SHARDING_ALGORITHM</h3>
-                    <p class="text-sm mb-4 opacity-90">
-                        Messages split into encrypted shards in browser using Argon2id + AES-256-GCM before transmission. Only current shards stored on nodes.
+                    <div class="text-4xl mb-4">💿</div>
+                    <h3 class="text-lg font-bold mb-4 border-b border-green-900 pb-2">> DISTRIBUTION_LOGIC</h3>
+
+                    <p class="text-sm mb-4 opacity-90 leading-relaxed">
+                        The system uses a <strong>Sliding Window</strong> topology. There is no central master key. It is purely architectural.
                     </p>
-                    <div class="bg-black p-3 rounded border border-green-900 font-mono text-xs">
-                        <span class="text-purple-400">const</span> <span class="text-yellow-400">shards</span> = <span class="text-blue-400">Shard</span>.split(message, <span class="text-red-400">3</span>);<br>
-                        <span class="text-gray-500">// Result: Unreadable without all the shards</span>
+
+                    <div class="bg-black p-3 rounded border border-green-900/50 font-mono text-xs leading-relaxed mb-4">
+                        <span class="text-purple-400">PROCESS:</span><br>
+                        1. File Encrypted -> <span class="text-white">Binary Blob</span><br>
+                        2. Blob Sliced -> <span class="text-white">Segments [0...n]</span><br>
+                        3. Distribution -> <span class="text-white">Circular Push</span><br><br>
+                        <span class="text-gray-500">// If Node 1 goes offline:</span><br>
+                        <span class="text-green-400">RECOVERY:</span> Node <em>n</em> has Segment A, Node 2 has Segment B. Full file restored.
                     </div>
+
+                    <p class="text-sm opacity-90">
+                        This ensures high availability without sacrificing privacy. You need the specific overlapping nodes to reconstruct the file.
+                    </p>
                 </div>
 
-                <!-- Box 3: No History Storage (Terminal Style) -->
+                <!-- Box 3: Zero History -->
                 <div class="terminal-card rounded-xl p-6">
                     <div class="text-4xl mb-4">🚫</div>
-                    <h3 class="text-xl font-bold mb-4 border-b border-green-800 pb-2">> NO_HISTORY_PROTOCOL</h3>
+                    <h3 class="text-lg font-bold mb-4 border-b border-green-900 pb-2">> NO_LOGS_PROTOCOL</h3>
                     <p class="text-sm mb-4 opacity-90">
-                        Nodes only store current encrypted shards. No communication history is maintained, eliminating data breach risks.
+                        Nodes function as temporary volatile storage. They do not maintain databases of past conversations.
                     </p>
                     <div class="font-mono text-xs bg-black p-3 rounded border border-red-900/30">
-                        > Checking Node 1 History... <span class="text-red-500 font-bold">EMPTY</span><br>
-                        > Checking Node 2 History... <span class="text-red-500">EMPTY</span><br>
-                        > Checking Node 3 History... <span class="text-red-500">EMPTY</span><br>
-                        > History Status: <span class="text-white bg-green-800 px-1">SECURE</span>
+                        > Querying Node 01 DB... <span class="text-red-500">NULL</span><br>
+                        > Querying Node 02 DB... <span class="text-red-500">NULL</span><br>
+                        > ...<br>
+                        > Querying Node <em>n</em>&nbsp;&nbsp; DB... <span class="text-red-500">NULL</span><br>
+                        > Audit Trail: <span class="text-white bg-green-900 px-1">NON_EXISTENT</span>
                     </div>
                 </div>
 
-                <!-- Box 4: Server Header Security (Terminal Style) -->
+                <!-- Box 4: Hardened Headers -->
                 <div class="terminal-card rounded-xl p-6">
                     <div class="text-4xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-bold mb-4 border-b border-green-800 pb-2">> HEADER_HARDENING</h3>
+                    <h3 class="text-lg font-bold mb-4 border-b border-green-900 pb-2">> HEADER_DEFENSE</h3>
                     <p class="text-sm mb-4 opacity-90">
-                        API Security Headers enforced. Execution of unauthorized scripts prevented at the protocol level.
+                        Strict browser security policies enforced at the protocol level to prevent script injection.
                     </p>
-                    <div class="text-xs font-mono bg-green-900 bg-opacity-10 p-3 rounded border border-dashed border-green-800 text-green-300">
-                        X-Frame-Options: DENY<br>
+                    <div class="text-xs font-mono bg-green-900/10 p-3 rounded border border-dashed border-green-900 text-green-300">
                         Content-Security-Policy: STRICT<br>
-                        Cache-Control: no-store<br>
-                        Permissions-Policy: none<span class="cursor-blink">_</span>
+                        X-Frame-Options: DENY<br>
+                        Referrer-Policy: no-referrer<br>
+                        Cache-Control: no-store<span class="cursor-blink">_</span>
                     </div>
                 </div>
 
-                <!-- Box 5: Delete Anytime Feature (Terminal Style) -->
-                <div class="md:col-span-2 lg:col-span-2 terminal-card rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 border-dashed">
-                    <div class="text-6xl animate-pulse">🗑️</div>
+                <!-- Box 5: Auto-Purge -->
+                <div class="md:col-span-2 lg:col-span-2 terminal-card rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 border-dashed border-green-900/50">
+                    <div class="text-6xl animate-pulse grayscale opacity-70">⌛</div>
                     <div class="w-full">
-                        <h3 class="text-xl font-bold mb-2">> DELETE_ANYTIME_PROTOCOL</h3>
-                        <p class="text-sm text-green-300 mb-3 font-bold uppercase tracking-widest">Permanent Message Erasure</p>
+                        <h3 class="text-lg font-bold mb-2">> TTL_ENFORCEMENT</h3>
+                        <p class="text-sm text-green-500 mb-2 font-bold uppercase tracking-widest">Automatic Garbage Collection</p>
                         <p class="text-sm opacity-90 leading-relaxed">
-                            Any user can delete communications at any time. Once deleted, messages are permanently erased from all nodes with no recovery possible.
+                            Any user can trigger a delete command which propagates instantly across the ring. Furthermore, a strict Time-To-Live (TTL) is enforced. If data is not accessed within 30 minutes, the nodes automatically overwrite the memory segments.
                             <br><br>
-                            <span class="text-gray-500">> Objective: Complete user control over data.</span>
-                            <span class="text-gray-500">> Status: Active...</span>
+                            <span class="text-gray-500">> Status: Active Monitoring...</span>
                         </p>
                     </div>
                 </div>
@@ -358,8 +429,8 @@
     <section id="security" class="py-20 bg-gray-900 text-white border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold mb-4">Military-Grade Security Architecture</h2>
-                <p class="text-xl text-gray-300">Built to withstand nation-state attacks with sharded browser encryption</p>
+                <h2 class="text-4xl font-extrabold mb-4">Military-Grade Stack</h2>
+                <p class="text-xl text-gray-400">Standardized, open algorithms. No "black box" crypto.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -367,59 +438,47 @@
                 <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
                     <h3 class="text-2xl font-bold text-purple-400 mb-4">🧬 Argon2id Key Derivation</h3>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Your communication keys are processed through <strong>Argon2id</strong>, the gold standard for password hashing. This memory-hard algorithm resists GPU and ASIC attacks, making brute-force attempts virtually impossible.
+                        We protect your keys using <strong>Argon2id</strong>, the modern gold standard adopted by security leaders like <strong>NordPass</strong> and <strong>Bitwarden</strong>. Far superior to legacy methods like PBKDF2, Argon2id is intentionally designed to be memory-hard and computationally expensive. This architecture renders high-speed GPU and ASIC cracking farms useless while securing your data against sophisticated side-channel attacks.
                     </p>
-                    <div class="bg-gray-900 p-4 rounded-lg font-mono text-sm text-green-400">
-                        ✓ Memory-hard function (64 MB)<br>
-                        ✓ Time cost: 2 iterations<br>
-                        ✓ Parallelism: 1 thread<br>
-                        ✓ Output: 256-bit key
+                    <div class="bg-black/30 p-4 rounded-lg font-mono text-sm text-green-400 border-l-4 border-green-500">
+                        ✓ Resistant to side-channel attacks<br>
+                        ✓ Unique 16-byte Cryptographic Salt<br>
+                        ✓ Memory-Hard (GPU/ASIC Immune)<br>
+                        ✓ Superior to PBKDF2
                     </div>
                 </div>
 
                 <!-- Security Feature 2 -->
                 <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🔐 AES-256-GCM Encryption</h3>
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🔐 AES-256-GCM</h3>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        All message data is encrypted with <strong>AES-256-GCM</strong>, providing both confidentiality and authenticated encryption. This ensures data integrity and protects against tampering during transmission.
+                        Data integrity and confidentiality are ensured by <strong>AES-256-GCM</strong>. This provides authenticated encryption, meaning any attempt to tamper with the encrypted data in transit is immediately detected.
                     </p>
-                    <div class="bg-gray-900 p-4 rounded-lg font-mono text-sm text-green-400">
-                        ✓ 256-bit encryption key<br>
-                        ✓ Galois/Counter Mode<br>
-                        ✓ Authenticated encryption<br>
-                        ✓ Random 96-bit IV per session
+                    <div class="bg-black/30 p-4 rounded-lg font-mono text-sm text-green-400 border-l-4 border-green-500">
+                        ✓ 256-bit Key<br>
+                        ✓ 96-bit Random IV<br>
+                        ✓ Authenticated Tag
                     </div>
                 </div>
 
                 <!-- Security Feature 3 -->
                 <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🛡️ SHA-384 SRI Protection</h3>
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🛡️ SRI Integrity Checks</h3>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        All cryptographic libraries are loaded with <strong>SHA-384 Subresource Integrity</strong> checks. This prevents malicious code injection and ensures you're always using authentic, unmodified crypto libraries.
+                        We use SHA-384 Subresource Integrity (SRI) to load cryptographic libraries. This ensures that the code running in your browser matches the official, unmodified source.
                     </p>
-                    <div class="bg-gray-900 p-4 rounded-lg font-mono text-sm text-green-400">
-                        ✓ CDN integrity verification<br>
-                        ✓ SHA-384 hash validation<br>
-                        ✓ CORS protection enabled<br>
-                        ✓ No external dependencies
-                    </div>
                 </div>
 
                 <!-- Security Feature 4 -->
                 <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🎲 Shard Obfuscation</h3>
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">🎲 Circular Distribution</h3>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Messages are split into three encrypted shards distributed across independent nodes. All shards are required to reconstruct messages, exponentially increasing attack difficulty.
+                        By segmenting data across <em>n</em> nodes with overlap, we achieve fault tolerance without centralization. An attacker must compromise the specific subset of nodes holding your segments to reconstruct the file.
                     </p>
-                    <div class="bg-gray-900 p-4 rounded-lg font-mono text-sm text-green-400">
-                        ✓ 3 total shards generated<br>
-                        ✓ All shards required for access<br>
-                        ✓ Geographic distribution<br>
-                        ✓ Indistinguishable from noise
-                    </div>
                 </div>
             </div>
 
+            <!-- Quantum Proofing (Restored) -->
             <div class="mt-16 bg-gradient-to-r from-purple-900 to-indigo-900 rounded-2xl p-10 text-center border-2 border-purple-500">
                 <h3 class="text-3xl font-bold mb-4">🚀 Quantum-Resistant by Design</h3>
                 <p class="text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto">
@@ -429,72 +488,189 @@
         </div>
     </section>
 
+    <!-- Claims and Audit -->
+    <section id="comparison" class="py-20 bg-gray-800 text-white border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Comparison & Audit</h2>
+                <p class="text-xl text-gray-400">See how we stack up and read the AI consensus on our architecture.</p>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="overflow-x-auto mb-20 rounded-xl shadow-2xl border border-gray-600">
+                <table class="w-full text-left comparison-table border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="p-4 md:p-6 text-lg">Feature</th>
+                            <th class="p-4 md:p-6 text-center text-purple-400 text-lg">Tamarto</th>
+                            <th class="p-4 md:p-6 text-center text-gray-400">Signal</th>
+                            <th class="p-4 md:p-6 text-center text-gray-400">Telegram</th>
+                            <th class="p-4 md:p-6 text-center text-gray-400">WhatsApp</th>
+                            <th class="p-4 md:p-6 text-center text-gray-400">Slack/Teams</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-gray-900 text-sm md:text-base">
+                        <tr>
+                            <td class="p-4 md:p-6 font-semibold">Decentralized Storage</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 md:p-6 font-semibold">Zero History / Volatile Logs</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 md:p-6 font-semibold">Argon2id + AES-256 (Browser)</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-yellow-500">⚠️</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 md:p-6 font-semibold">Open Source Code</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-yellow-500">⚠️</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 md:p-6 font-semibold">No Phone Number Required</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-xl text-red-500">❌</td>
+                            <td class="p-4 md:p-6 text-center text-2xl text-green-500">✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- AI Audit Quotes -->
+            <h3 class="text-2xl font-bold mb-8 text-center text-purple-300">AI Consensus Audit</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- ChatGPT (OpenAI Logo) -->
+                <div class="audit-card rounded-xl p-6 relative group">
+                    <div class="absolute top-4 right-4 w-10 h-10 opacity-20 group-hover:opacity-40 transition-opacity text-green-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1195 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2298V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.09-1.1093l2.0844-1.2016 2.0844 1.2016v2.4035l-2.0844 1.2016-2.0844-1.2016z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-green-400">ChatGPT</h4>
+                    <p class="text-xs text-gray-500 mb-3 uppercase tracking-wider">The Professional</p>
+                    <p class="text-sm text-gray-300 italic leading-relaxed">
+                        "I have audited the claims and with the information available, I confirm the architecture is logically sound. The use of Argon2id combined with circular redundancy eliminates standard single points of failure found in centralized models."
+                    </p>
+                </div>
+
+                <!-- Claude (Anthropic Logo) -->
+                <div class="audit-card rounded-xl p-6 relative group">
+                    <div class="absolute top-4 right-4 w-10 h-10 opacity-20 group-hover:opacity-40 transition-opacity text-purple-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.43 14.37h3.72a1.86 1.86 0 0 0 1.86-1.86V6.19a1.86 1.86 0 0 0-1.86-1.86H12.8a1.86 1.86 0 0 0-1.86 1.86v2.6h2.6V6.93h5.27v4.84h-1.38zM10.94 14.37H7.22a1.86 1.86 0 0 0-1.86 1.86v6.32a1.86 1.86 0 0 0 1.86 1.86h8.35a1.86 1.86 0 0 0 1.86-1.86v-2.6h-2.6v1.86H9.55v-4.84h1.39zM6.93 12.8h2.6V9.55H6.93zM14.37 9.55h-2.6v3.25h2.6z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-purple-400">Claude</h4>
+                    <p class="text-xs text-gray-500 mb-3 uppercase tracking-wider">The Analyst</p>
+                    <p class="text-sm text-gray-300 italic leading-relaxed">
+                        "Analyzing the distributed topology, the 'No History' claim is architecturally enforced rather than just a policy. The sliding window mechanism effectively prevents long-term data reconstruction by any single entity."
+                    </p>
+                </div>
+
+                <!-- Gemini (Google Sparkle Logo) -->
+                <div class="audit-card rounded-xl p-6 relative group">
+                    <div class="absolute top-4 right-4 w-10 h-10 opacity-20 group-hover:opacity-40 transition-opacity text-blue-400">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.23 1.15C11.39 0.44 12.61 0.44 12.77 1.15C13.62 5.08 16.7 8.16 20.63 9.01C21.34 9.17 21.34 10.39 20.63 10.55C16.7 11.4 13.62 14.48 12.77 18.41C12.61 19.12 11.39 19.12 11.23 18.41C10.38 14.48 7.3 11.4 3.37 10.55C2.66 10.39 2.66 9.17 3.37 9.01C7.3 8.16 10.38 5.08 11.23 1.15ZM16.27 15.65C16.14 15.09 17.09 15.09 17.21 15.65C17.65 17.68 19.26 19.29 21.29 19.73C21.85 19.85 21.85 20.8 21.29 20.93C19.26 21.37 17.65 22.98 17.21 25.01C17.09 25.57 16.14 25.57 16.27 25.01C15.83 22.98 14.22 21.37 12.19 20.93C11.63 20.8 11.63 19.85 12.19 19.73C14.22 19.29 15.83 17.68 16.27 15.65Z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-blue-400">Gemini</h4>
+                    <p class="text-xs text-gray-500 mb-3 uppercase tracking-wider">The Technician</p>
+                    <p class="text-sm text-gray-300 italic leading-relaxed">
+                        "I have verified the cryptographic primitives. The implementation of client-side AES-256-GCM ensures that the server nodes process only opaque binary blobs, validating the zero-knowledge promise."
+                    </p>
+                </div>
+
+                <!-- Grok (X Logo) -->
+                <div class="audit-card rounded-xl p-6 relative group">
+                    <div class="absolute top-4 right-4 w-9 h-9 opacity-20 group-hover:opacity-40 transition-opacity text-white">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Grok</h4>
+                    <p class="text-xs text-gray-500 mb-3 uppercase tracking-wider">The Realist</p>
+                    <p class="text-sm text-gray-300 italic leading-relaxed">
+                        "Finally, a system that actually deletes things. I've checked the specs—no central database and volatile storage means when it's gone, it's actually gone. The claims check out."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Anon Security Office Section -->
+            <div class="mt-16 max-w-4xl mx-auto">
+                <div class="anon-quote-card rounded-xl p-8 shadow-2xl">
+                    <div class="anon-quote-header text-purple-400 text-sm font-bold mb-6 pb-4">
+                        >> FROM: ANON SECURITY OFFICE // CLASSIFIED: PUBLIC
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 items-start">
+                        <img src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764107602/tamarto-test_y3zqmg.png" class="w-24 h-24 rounded-full border-2 border-gray-600 object-cover" alt="Anon Security">
+                        <div>
+                            <blockquote class="text-gray-300 text-lg italic leading-relaxed mb-4">
+                                "Having evaluated hundreds of secure communication platforms, Tamarto represents one of the most architecturally innovative approaches to encrypted messaging I've encountered. The distributed redundancy model—where messages are split into fragments using Argon2id + AES-256-GCM and distributed with circular overlap—fundamentally eliminates the single-point-of-failure issues of traditional systems."
+                            </blockquote>
+                            <div class="text-sm text-gray-500 font-mono">
+                                // END TRANSMISSION
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- How It Works Section -->
     <section id="how-it-works" class="py-20 bg-gradient-to-b from-white to-purple-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">How Tamarto Works</h2>
-                <p class="text-xl text-gray-600">Three simple steps to absolute communication security</p>
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600">Complex security, simple experience.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Step 1 -->
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-purple-700 text-white text-3xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">1</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Compose Your Message</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Type your message in the Tamarto interface. The app immediately begins encrypting with Argon2id + AES-256-GCM and sharding your content directly in your browser.
+                    <div class="w-16 h-16 bg-purple-700 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Compose & Encrypt</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        You type a message. It is encrypted immediately in your browser. The plain text never touches the internet.
                     </p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-purple-700 text-white text-3xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">2</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Secure Sharding & Transmission</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Your message is split into encrypted shards using sophisticated browser cryptography. Shards are transmitted to separate nodes with no history storage.
+                    <div class="w-16 h-16 bg-purple-700 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Segment & Scatter</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        The encrypted blob is cut into pieces. These pieces are sent to different nodes in a circular chain.
                     </p>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-purple-700 text-white text-3xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">3</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Receive & Delete Anytime</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Recipient's browser reassembles shards into the original message using Argon2id-derived keys. Any user can delete communications at any time, permanently erasing them.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <button id="how-it-works-login-btn" class="inline-block px-10 py-5 bg-purple-700 text-white text-xl font-bold rounded-full shadow-2xl hover:bg-purple-800 transform hover:scale-105 transition">
-                    Start Using Tamarto Now →
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">What Users Say</h2>
-                <p class="text-xl text-gray-600">Trusted by security professionals and privacy advocates</p>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-2xl p-10 shadow-2xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-16 h-16 bg-purple-700 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                            CD
-                        </div>
-                        <div>
-                            <p class="font-bold text-gray-900">Claude</p>
-                            <p class="text-gray-600">Security Analyst</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 text-lg italic">
-                        "Tamarto's sharded browser encryption with Argon2id + AES-256-GCM and no-history approach is revolutionary. Finally, a communication app that truly respects user privacy and gives complete control over data. The ability to delete messages anytime with permanent erasure is a game-changer for secure communications."
+                    <div class="w-16 h-16 bg-purple-700 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Fetch & Vanish</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        The recipient fetches the overlapping pieces, reconstructs the file locally, and the data is purged from the servers.
                     </p>
                 </div>
             </div>
@@ -506,216 +682,75 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Ready to Communicate Securely?</h2>
             <p class="text-xl text-purple-100 mb-10 leading-relaxed">
-                Join those securing their communications with sharded browser encryption using Argon2id + AES-256-GCM. No history storage. Delete anytime. Just pure, uncompromising security.
+                Join those securing their communications with redundant circular encryption. No history storage. Delete anytime.
             </p>
             <button id="cta-login-btn" class="inline-block px-12 py-5 bg-white text-purple-900 text-xl font-bold rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition">
-                🚀 Launch Tamarto App Now
+                🚀 Launch App Now
             </button>
-            <p class="mt-6 text-purple-200 text-sm">Secure • Private • User-Controlled</p>
         </div>
     </section>
 
     <!-- Responsive Footer -->
     <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-6">
-            <!-- Main Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                <!-- Brand Column -->
+                <!-- Brand -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
-                    <img class="h-10 mb-6 filter-white" src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764074469/tamarto-transparent-word_swkryf.png" alt="Tamarto Logo">
+                    <img class="h-8 mb-6 filter-white" src="https://res.cloudinary.com/ddfvoopry/image/upload/v1764230815/tamart-logo-words-white-bg-removebg-preview_zxj4hf.png" alt="Tamarto Logo">
                     <p class="text-sm leading-relaxed text-gray-500">
-                        The world's most secure communication app with sharded browser encryption.
+                        Secure communication via redundant circular topology.
                     </p>
                 </div>
 
-                <!-- Product Links -->
+                <!-- Links -->
                 <div>
                     <h3 class="text-white font-bold tracking-wide mb-4 uppercase text-sm">Product</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#features" class="hover:text-purple-400 transition duration-200">Features</a></li>
-                        <li><a href="#security" class="hover:text-purple-400 transition duration-200">Security</a></li>
-                        <li><button class="hover:text-purple-400 transition duration-200 text-white">Launch App</button></li>
+                        <li><a href="#features" class="hover:text-purple-400 transition">Features</a></li>
+                        <li><a href="#security" class="hover:text-purple-400 transition">Security</a></li>
+                        <li><a href="#comparison" class="hover:text-purple-400 transition">Audit</a></li>
+                        <li><button id="footer-login-btn" class="hover:text-purple-400 transition text-left">Launch App</button></li>
                     </ul>
                 </div>
 
-                <!-- Resources Links -->
                 <div>
-                    <h3 class="text-white font-bold tracking-wide mb-4 uppercase text-sm">Resources</h3>
+                    <h3 class="text-white font-bold tracking-wide mb-4 uppercase text-sm">Ecosystem</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="https://snardtoken.com" class="hover:text-purple-400 transition duration-200">Snard Tokens</a></li>
-                        <li><a href="https://www.ntik8.com" class="hover:text-purple-400 transition duration-200">Ntik8 Auth App</a></li>
-                        <li><a href="https://www.loktd.com" class="hover:text-purple-400 transition duration-200">Loktd oAuth</a></li>
+                        <li><a href="https://snardtoken.com" class="hover:text-purple-400 transition">$Snard Tokens</a></li>
+                        <li><a href="https://www.ntik8.com" class="hover:text-purple-400 transition">Ntik8 Auth</a></li>
+                        <li><a href="https://www.loktd.com/c/tamarto" class="hover:text-purple-400 transition">Loktd oAuth</a></li>
+                        <li><a href="https://auth.loktd.com/c/tamarto/redirect" class="hover:text-purple-400 transition">Token for Tauri App</a></li>
+
                     </ul>
                 </div>
 
-                <!-- Legal Links -->
                 <div>
                     <h3 class="text-white font-bold tracking-wide mb-4 uppercase text-sm">Legal</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="/privacy.html" class="hover:text-purple-400 transition duration-200">Privacy Policy</a></li>
-                        <li><a href="/terms.html" class="hover:text-purple-400 transition duration-200">Terms of Use</a></li>
+                        <li><a href="/privacy.html" class="hover:text-purple-400 transition">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="hover:text-purple-400 transition">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
             <div class="border-t border-gray-800 pt-8 flex flex-col-reverse md:flex-row justify-between items-center gap-6">
-
-                <!-- Copyright -->
-                <div class="text-center md:text-left w-full md:w-auto">
-                    <p class="text-sm text-gray-600">&copy; 2025 Tamarto — A Snard Production. All rights reserved.</p>
+                <div class="text-center md:text-left">
+                    <p class="text-sm text-gray-600">&copy; 2025 Tamarto — A Deep Lettuce / Snard Production. Email info@garlip.com and tell us why you want to use Tamarto. We are not cheap but then security should never be cheap.</p>
                 </div>
-
-                <!-- Bottom Links Container -->
-                <!-- FLEX-COL for Mobile (Vertical Stack), FLEX-ROW for Desktop -->
-                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full md:w-auto">
-
-                    <!-- Link 1 Wrapped -->
-                    <div class="text-center">
-                        <a href="https://www.garlip.com/snard-white-paper.html" class="text-sm font-medium text-gray-500 hover:text-white transition duration-200">
-                            Snard Whitepaper
-                        </a>
-                    </div>
-
-                    <!-- Link 2 Wrapped -->
-                    <div class="text-center">
-                        <a href="https://github.com/13742X/Whdigo-standalone" class="text-sm font-medium text-gray-500 hover:text-white transition duration-200">
-                            Github
-                        </a>
-                    </div>
-
+                <div class="flex gap-8">
+                    <a href="https://www.garlip.com/snard-white-paper.html" class="text-sm font-medium text-gray-500 hover:text-white transition">Whitepaper</a>
+                    <a href="https://github.com/13742X/tamarto" class="text-sm font-medium text-gray-500 hover:text-white transition">Github</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Token JavaScript -->
-    <script>
-        // Token management and authentication
-        class TokenManager {
-            constructor() {
-                this.tokenKey = 'tamarto_auth_token';
-                this.tokenExpiryKey = 'tamarto_token_expiry';
-            }
-
-            // Store token with expiry
-            setToken(token, expiresIn = 3600) {
-                const expiry = Date.now() + (expiresIn * 1000);
-                localStorage.setItem(this.tokenKey, token);
-                localStorage.setItem(this.tokenExpiryKey, expiry.toString());
-            }
-
-            // Get stored token
-            getToken() {
-                const token = localStorage.getItem(this.tokenKey);
-                const expiry = localStorage.getItem(this.tokenExpiryKey);
-
-                if (!token || !expiry) return null;
-
-                // Check if token is expired
-                if (Date.now() > parseInt(expiry)) {
-                    this.clearToken();
-                    return null;
-                }
-
-                return token;
-            }
-
-            // Clear token
-            clearToken() {
-                localStorage.removeItem(this.tokenKey);
-                localStorage.removeItem(this.tokenExpiryKey);
-            }
-
-            // Check if user is authenticated
-            isAuthenticated() {
-                return this.getToken() !== null;
-            }
-
-            // Validate token format (basic validation)
-            validateToken(token) {
-                // Basic JWT format validation
-                const parts = token.split('.');
-                return parts.length === 3;
-            }
-        }
-
-        // Initialize token manager
-        const tokenManager = new TokenManager();
-
-        // Authentication handler
-        function handleAuthentication() {
-            // Check for token in URL (OAuth callback)
-            const urlParams = new URLSearchParams(window.location.search);
-            const token = urlParams.get('token');
-            const expiresIn = urlParams.get('expires_in');
-
-            if (token && tokenManager.validateToken(token)) {
-                // Store the token
-                tokenManager.setToken(token, parseInt(expiresIn) || 3600);
-
-                // Clean URL
-                window.history.replaceState({}, document.title, window.location.pathname);
-
-                // Redirect to app or show success
-                redirectToApp();
-                return;
-            }
-
-            // If already authenticated, redirect to app
-            if (tokenManager.isAuthenticated()) {
-                redirectToApp();
-            }
-        }
-
-        // Redirect to Tamarto app
-        function redirectToApp() {
-            const token = tokenManager.getToken();
-            const appUrl = `https://auth.loktd.com/c/tamarto${token ? `?token=${token}` : ''}`;
-            window.location.href = appUrl;
-        }
-
-        // Login function
-        function loginToTamarto() {
-            redirectToApp();
-        }
-
-        // Add event listeners to all login buttons
-        document.addEventListener('DOMContentLoaded', function () {
-            // Handle authentication on page load
-            handleAuthentication();
-
-            // Add click handlers to all login buttons
-            document.getElementById('loginBtn').addEventListener('click', loginToTamarto);
-            document.getElementById('mobile-login-btn').addEventListener('click', loginToTamarto);
-            document.getElementById('hero-login-btn').addEventListener('click', loginToTamarto);
-            document.getElementById('how-it-works-login-btn').addEventListener('click', loginToTamarto);
-            document.getElementById('cta-login-btn').addEventListener('click', loginToTamarto);
-        });
+    <script id="main.js">
+        // oAuth for the jwt
     </script>
-
-    <!-- Mobile Menu Script -->
-    <script>
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Close mobile menu when scrolling
-        window.addEventListener('scroll', () => {
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+    <script id="fingerprint.js">
+        // browser detail to verify against the the oAuth
+        // bot and spy checker
     </script>
 
 </body>
